@@ -1,0 +1,46 @@
+resources:
+  limits:
+    cpus: 2.0
+    memory: 4096
+
+bind9:
+  additional_envs: []
+
+run_as:
+  user: 0
+  group: 0
+
+network:
+  host_network: false
+  udp_port:
+    bind_mode: published
+    port_number: 57
+    protocol: udp
+  tcp_port:
+    bind_mode: published
+    port_number: 57
+    protocol: tcp
+  rndc_port:
+    bind_mode: published
+    port_number: 957
+    protocol: tcp
+    host_ips:
+      - "127.0.0.1"
+      - "::1"
+
+ix_volumes:
+  logs: /opt/tests/mnt/bind9-logs
+  config: /opt/tests/mnt/bind9-config
+
+storage:
+  logs:
+    type: ix_volume
+    ix_volume_config:
+      dataset_name: logs
+      create_host_path: true
+  config:
+    type: ix_volume
+    ix_volume_config:
+      dataset_name: config
+      create_host_path: true
+  additional_storage: []

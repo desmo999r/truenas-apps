@@ -1,0 +1,31 @@
+app_version: 9.18.0
+capabilities: []
+categories:
+- productivity
+changelog_url: https://bind9.readthedocs.io/en/v9.18.14/notes.html
+date_added: '2025-05-23'
+description: The Berkeley Internet Name Domain (BIND) software implements a domain name server for a number of operating systems. 
+home: https://www.isc.org/bind/
+host_mounts: []
+icon: https://www.isc.org/images/isclogos/Bind_9_Mark_ISC_Blue.png
+keywords:
+- dns
+lib_version: 2.1.16
+lib_version_hash: dac15686f882b9ce65b8549a3d5c0ed7bafe2df7a9028880d1a99b0ff4af1eff
+maintainers:
+- email: dev@ixsystems.com
+  name: truenas
+  url: https://www.truenas.com/
+name: bind9
+run_as_context:
+- description: Bind9 runs as any non-root user.
+  gid: 568
+  group_name: named
+  uid: 568
+  user_name: named
+screenshots: []
+sources:
+- https://gitlab.isc.org/isc-projects/bind9
+title: Bind9
+train: community
+version: 0.9.0

@@ -1,0 +1,8 @@
+images:
+  image:
+    repository: docker.io/internetsystemsconsortium/bind9
+    tag: 9.18
+
+consts:
+  bind9_container_name: bind9
+  perms_container_name: permissions
